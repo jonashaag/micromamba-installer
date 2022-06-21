@@ -24,7 +24,7 @@ jobs:
           chmod +x install.sh
           ./install.sh
           ~/mm info
-      - uses: JasonEtco/create-an-issue@v2
+      - uses: dblock/create-a-github-issue@2c9fa0d32c24d651281c37d21e5b49e333500fe8
         if: failure()
         with:
           filename: .github/workflows/test_issue.md
