@@ -9,7 +9,7 @@ function platform_name () {
   echo $x
 }
 
-BIN_LOCATION=~/micromamba
+BIN_LOCATION=~/mm  # https://github.com/mamba-org/mamba/issues/1751
 if [ $# = 1 ]; then
   BIN_LOCATION="$1"
 elif [ $# != 0 ]; then
