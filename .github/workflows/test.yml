@@ -3,6 +3,8 @@ name: Test micro.mamba.pm
 on:
   push: null
   pull_request: null
+  schedule:
+    - cron: '0 10 * * *'
 
 permissions:
   contents: read
@@ -23,7 +25,7 @@ jobs:
           ./install.sh
           ~/mm info
       - uses: JasonEtco/create-an-issue@v2
-        #if: failure()
+        if: failure()
         with:
           filename: .github/workflows/test_issue.md
           update_existing: true
