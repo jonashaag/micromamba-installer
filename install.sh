@@ -5,7 +5,7 @@ function platform_name () {
   x=$(uname)-$(uname -m)
   x=${x,,}
   x=${x//darwin/osx}
-  x=${x//_x86/}
+  x=${x//x86_/}
   echo $x
 }
 
